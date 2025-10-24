@@ -4,7 +4,7 @@ import css from "./NoteForm.module.css";
 import type { NoteTag } from "../../types/note";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import * as Yup from "yup";
-import { createNote, NewNote } from "@/lib/api";
+import { createNote, NewNote } from "@/lib/api/clientApi";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useNoteDraftStore } from "@/lib/store/noteStore";
