@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 export const getMe = async (): Promise<User> => {
   const cookiStore = await cookies();
 
-  const response = await nextServer.get<User>("users/me", {
+  const response = await nextServer.get<User>("/users/me", {
     headers: {
       Cookie: cookiStore.toString(),
     },
