@@ -6,11 +6,11 @@ import { Note } from "@/types/note";
 import { AxiosResponse } from "axios";
 
 export const getMe = async (): Promise<User> => {
-  const cookiStore = await cookies();
+  const cookieStore = await cookies();
 
   const response = await nextServer.get<User>("/users/me", {
     headers: {
-      Cookie: cookiStore.toString(),
+      Cookie: cookieStore.toString(),
     },
   });
   return response.data;
